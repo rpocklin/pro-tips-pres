@@ -1,0 +1,132 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Pro Tips in PRs
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+    article
+      section
+        h2(style="font-size: 250%;")
+          span(style="color: #aaccaa") Pro Tips in PRs
+        br
+
+      section
+        br
+        h2 Quick Intro
+        li
+        li Rob Pocklington
+        li Java, Ruby, Groovy, Scala, Node + TS / JS
+        li Worked at <span style="color: #6699ff">MYOB</span>, <span style="color: #66aaff">Sportsbet</span>, <span style="color: #99ccff">Seek</span> and <span style="color: #66ccee">NAB</span>
+        li Frontend Development Lead @ <span style="color: #66ccee">AGL</span>
+        li
+
+      section
+        br
+        h2(style="color: #ddcc88") Breakdown
+        li(style="height: 10px")
+        li Overview + Goals
+        li General Tips - Typescript / Angular
+        li 5 Pro Tips in Detail
+        li Automating Feedback
+        li
+
+      section
+        li
+          h2(style="color: #cc88aa") Overview
+        li
+        li Every codebase has code reviewed regularly
+        li PRs are the best process mature teams tend to follow
+        li
+        li Time spent in PR feedback can slow down productivity and momentum.
+        li
+        li <b>So how can you improve it?</b>
+        li 
+
+      section
+        h2(style="color: #cc88aa") The Goals
+        li
+        li Validate that the changes in code match the goals of the feature in terms of the following attributes:<br/><br/>
+        li <b>naming conventions</b>
+        li <b>code quality</b>
+        li <b>testability</b>
+        li <b>maintainability</b>
+        li <b>security and performance</b>
+
+        // - The ideal is to raise Pull Requests to give time for other developers to read, review and give feedback on the quality of your changes.
+        // - group comments, private / coffee / water cooler chats, pairing, group coding sessions or when fixing someone elses bug
+
+      section
+        h2(style="color: #cc88aa") The Tips - Typescript
+        li
+        li Prefer <b>=></b> to <b>get</b> properties
+        li Prefer <b>map</b> object selector to <b>switch</b> statements
+        li Prefer <b>map</b> or <b>reduce</b> to <b>forEach</b> and <b>push</b>
+        li
+        li Don't <b>forEach</b> - use <b>map</b>, <b>reduce</b>, <b>filter</b>, <b>find</b>
+        li Don't <b>forEach</b> - use <b>includes</b>, <b>some</b>, <b>every</b>
+
+
+      section
+        h2(style="color: #cc88aa") The Tips - Typescript (cont ...)
+        li
+        li Don't abbreviate!  eg. <b>cNo</b>, <b>custNo</b> vs. <b>customerNumber</b>
+        li
+        li Don't use native <b>Date()</b> instead use:
+        li <b>moment</b> / <b>dayjs</b> / <b>date-fns</b>
+
+      section
+        h2(style="color: #cc88aa") The Tips - Typescript (cont ...)
+        li
+        li Cyclomatic complexity hurts the head:
+        li indenting is the give-away.
+        li
+        li Returning a boolean?  Name <b>isXXX</b> or <b>hasXXX</b>
+        li
+        li Embrace truthy and falsy
+        li <b>if (x.length > 0)</b> is equivalent to <b>if (x.length)</b>
+        
+      section
+        h2(style="color: #cc88aa") The Tips - Angular
+        li
+        li One module per component.  Always.
+        li Testing observables (no <b>async</b> - use jasmine <b>done()</b>)
+        li Don't put logic into the HTML (only a simple <b>ng-if</b>)
+        li
+        li Don't use <b>?</b> in HTML:
+        li it makes code fragile (eg. <b>someVar?.value</b>)
+
+      //- section
+      //-     h2(style="color: #8888cc") The Tips - Specs
+      //-   li
+      //-   li Keep `it` blocks small
+      //-   li Embrace `describe` nesting - use passive language and avoid using commas or conjunctions
+
+        // egs date function, switch statement, forEach x 2, ? in HTML, module per component
+        // testing observables
+
+        // others tips: github turn off whitespace detection 
+        // https://github.com/AGLEnergy/AGL.Digital.Apps/pull/3006/files?utf8=%E2%9C%93&diff=unified&w=1
+
+      section
+        h2(style="color: #66aaff") Automating Feedback
+        li
+        li Code Formatting
+        li Code Linting
+        li Code Coverage
+        li Code Quality Reports (duplication, complexity)
+        li
+        li Tests (unit, integration, E2E, visual, accessibility, performance, infrastructure)
+        li
+
+      section
+        h2(style="color: #66eeaa") Thanks for listening!<br/><br/>
+        li Slides<br/><b>https://rp.js.org/pro-tips-pres/</b><br/><br/>Twitter<br/><b>@angularMelb @rpocklin</b>
+        li <br/>
+
+      section
+        h2(style="color: #aa99ff") Questions?<br/><br/><br/><br/><br/><br/><br/>
+
+    script(src='build/build.js')
