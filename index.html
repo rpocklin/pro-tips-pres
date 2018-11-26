@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Pro Tips in PRs</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <div style="display: inline-block"><img src="images/css3badge.png" width="180px" style="border-radius: 5px" class="right"></div><br>
+        <h2 style="font-size: 250%;"><span style="color: #aaccaa">Pro Tips in PRs</span></h2>
+        <!--span.small 0.7.1--><br>
+      </section>
+      <section><br>
+        <h2>Quick Intro</h2>
+        <li></li>
+        <li>Rob Pocklington</li>
+        <li>Java, Ruby, Groovy, Scala, Node + JS</li>
+        <li>Worked at <span style="color: #6699ff">MYOB</span>, <span style="color: #66aaff">Sportsbet</span>, <span style="color: #99ccff">Seek</span> and <span style="color: #66ccee">NAB</span></li>
+        <li>Frontend Development Lead @ <span style="color: #66ccee">AGL</span></li>
+        <li></li>
+      </section>
+      <section><br>
+        <h2 style="color: #ddcc88">Breakdown</h2>
+        <li style="height: 10px"></li>
+        <li>Overview</li>
+        <li>The Goals</li>
+        <li>The Tips (Typescript and Angular)</li>
+        <li>6 Pro Tips in Detail</li>
+        <li>Automating Feedback</li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">Overview</h2>
+        </li>
+        <li></li>
+        <li>Every codebase does code reviews - group comments, private / coffee / water cooler chats, pairing, group coding sessions or when fixing someone elses bug</li>
+        <li>The ideal is to raise Pull Requests to give time for other developers to read, review and give feedback on the quality of your changes.</li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">The Goals</h2>
+        </li>
+        <li></li>
+        <li>Validate the the changes in code and infrastructure match the goals of the product in terms of the following:</li>
+        <li>code quality, naming conventions, testability, maintainability, performance given any relevant comprimises needing to be made.</li>
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">The Tips - Typescript</h2>
+        <li></li>
+        <li>Prefer <b>=></b> to <b>get</b> properties</li>
+        <li>Prefer <b>map</b> to <b>forEach</b> and <b>.push</b></li>
+        <li>Prefer <b>map</b> object selector to <b>switch</b> statements</li>
+        <li>Don't <b>forEach</b> - use <b>includes</b>, <b>some</b>, <b>every</b>,</li>
+        <li>Don't <b>forEach</b> - use <b>map</b>, <b>reduce</b>, <b>filter</b>, <b>find</b></li>
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">The Tips - Typescript (cont ...)</h2>
+        <li></li>
+        <li>Don't abbreviate!  eg. <b>cNo</b>, <b>custNo</b> vs. <b>customerNumber</b></li>
+        <li></li>
+        <li>Don't use native `Date()` instead use</li>
+        <li><b>moment</b> / <b>dayjs</b> / <b>date-fns</b></li>
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">The Tips - Typescript (cont ...)</h2>
+        <li></li>
+        <li>Cyclomatic complexity hurts the head:</li>
+        <li>indenting is the give-away.</li>
+        <li></li>
+        <li>Returning a boolean?  Name <b>isXXX</b> or <b>hasXXX</b></li>
+        <li></li>
+        <li>Embrace truthy and falsy</li>
+        <li><b>if (x.length > 0)</b> is equivalent to <b>if (x.length)</b></li>
+      </section>
+      <section>
+        <h2 style="color: #cc88aa">The Tips - Angular</h2>
+        <li></li>
+        <li>One module per component.  Always.</li>
+        <li>Testing observables (no <b>async</b> - use jasmine <b>DoneFn</b>)</li>
+        <li>Don't put logic into the HTML (only a simple <b>ng-if</b>)</li>
+        <li></li>
+        <li>Don't use <b>?</b> in HTML:</li>
+        <li>it makes code fragile / brittle (eg. <b>someVar?.value</b>)</li>
+      </section>
+      <section>
+        <h2 style="color: #66aaff">Automating Feedback</h2>
+        <li></li>
+        <li>Code Formatting</li>
+        <li>Code Linting</li>
+        <li>Code Coverage</li>
+        <li>Code Quality (duplication, complexity)</li>
+        <li></li>
+        <li>Tests (unit, integration, E2E, visual, accessibility, performance, infrastructure)</li>
+        <li></li>
+      </section>
+      <section>
+        <h2 style="color: #66eeaa">Thanks for listening!<br/><br/></h2>
+        <li>Slides<br/><b>rp.js.org/pro-tips-pres/</b><br/><br/>Twitter<br/><b>@angularMelb @rpocklin</b></li>
+        <li><br/></li>
+      </section>
+      <section>
+        <h2 style="color: #aa99ff">Questions?<br/><br/><br/><br/><br/><br/><br/></h2>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
