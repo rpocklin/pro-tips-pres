@@ -15,7 +15,7 @@
         <h2>Quick Intro</h2>
         <li></li>
         <li>Rob Pocklington</li>
-        <li>Java, Ruby, Groovy, Scala, Node + JS</li>
+        <li>Java, Ruby, Groovy, Scala, Node + TS / JS</li>
         <li>Worked at <span style="color: #6699ff">MYOB</span>, <span style="color: #66aaff">Sportsbet</span>, <span style="color: #99ccff">Seek</span> and <span style="color: #66ccee">NAB</span></li>
         <li>Frontend Development Lead @ <span style="color: #66ccee">AGL</span></li>
         <li></li>
@@ -23,10 +23,9 @@
       <section><br>
         <h2 style="color: #ddcc88">Breakdown</h2>
         <li style="height: 10px"></li>
-        <li>Overview</li>
-        <li>The Goals</li>
-        <li>The Tips (Typescript and Angular)</li>
-        <li>6 Pro Tips in Detail</li>
+        <li>Overview + Goals</li>
+        <li>General Tips - Typescript / Angular</li>
+        <li>5 Pro Tips in Detail</li>
         <li>Automating Feedback</li>
         <li></li>
       </section>
@@ -36,16 +35,17 @@
         </li>
         <li></li>
         <li>Every codebase has code reviewed regularly</li>
-        <li>PRs is the best process mature teams tend to follow</li>
+        <li>PRs are the best process mature teams tend to follow</li>
         <li></li>
-        <li>Time spent in PRs feedback can kill productivity,</li>
-        <li>so how can you improve it?</li>
+        <li>Time spent in PR feedback can slow down productivity and momentum.</li>
+        <li></li>
+        <li><b>So how can you improve it?</b></li>
         <li></li>
       </section>
       <section>
         <h2 style="color: #cc88aa">The Goals</h2>
         <li></li>
-        <li>Validate the the changes in code and infrastructure match the goals of the product in terms of the following attributes:<br/><br/></li>
+        <li>Validate that the changes in code match the goals of the feature in terms of the following attributes:<br/><br/></li>
         <li><b>naming conventions</b></li>
         <li><b>code quality</b></li>
         <li><b>testability</b></li>
@@ -58,17 +58,18 @@
         <h2 style="color: #cc88aa">The Tips - Typescript</h2>
         <li></li>
         <li>Prefer <b>=></b> to <b>get</b> properties</li>
-        <li>Prefer <b>map</b> to <b>forEach</b> and <b>push</b></li>
         <li>Prefer <b>map</b> object selector to <b>switch</b> statements</li>
-        <li>Don't <b>forEach</b> - use <b>includes</b>, <b>some</b>, <b>every</b></li>
+        <li>Prefer <b>map</b> or <b>reduce</b> to <b>forEach</b> and <b>push</b></li>
+        <li></li>
         <li>Don't <b>forEach</b> - use <b>map</b>, <b>reduce</b>, <b>filter</b>, <b>find</b></li>
+        <li>Don't <b>forEach</b> - use <b>includes</b>, <b>some</b>, <b>every</b></li>
       </section>
       <section>
         <h2 style="color: #cc88aa">The Tips - Typescript (cont ...)</h2>
         <li></li>
         <li>Don't abbreviate!  eg. <b>cNo</b>, <b>custNo</b> vs. <b>customerNumber</b></li>
         <li></li>
-        <li>Don't use native <b>Date()</b> instead use</li>
+        <li>Don't use native <b>Date()</b> instead use:</li>
         <li><b>moment</b> / <b>dayjs</b> / <b>date-fns</b></li>
       </section>
       <section>
@@ -86,11 +87,11 @@
         <h2 style="color: #cc88aa">The Tips - Angular</h2>
         <li></li>
         <li>One module per component.  Always.</li>
-        <li>Testing observables (no <b>async</b> - use jasmine <b>DoneFn</b>)</li>
+        <li>Testing observables (no <b>async</b> - use jasmine <b>done()</b>)</li>
         <li>Don't put logic into the HTML (only a simple <b>ng-if</b>)</li>
         <li></li>
         <li>Don't use <b>?</b> in HTML:</li>
-        <li>it makes code fragile / brittle (eg. <b>someVar?.value</b>)</li>
+        <li>it makes code fragile (eg. <b>someVar?.value</b>)</li>
       </section>
       <section>
         <h2 style="color: #66aaff">Automating Feedback</h2>
@@ -98,7 +99,7 @@
         <li>Code Formatting</li>
         <li>Code Linting</li>
         <li>Code Coverage</li>
-        <li>Code Quality (duplication, complexity)</li>
+        <li>Code Quality Reports (duplication, complexity)</li>
         <li></li>
         <li>Tests (unit, integration, E2E, visual, accessibility, performance, infrastructure)</li>
         <li></li>
